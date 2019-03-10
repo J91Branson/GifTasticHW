@@ -29,7 +29,6 @@
       // This function handles events where one button is clicked
       $("#add-hero").on("click", function(event) {
         // event.preventDefault() prevents the form from trying to submit itself.
-        // We're using a form so that the user can hit enter instead of clicking the button if they want
         event.preventDefault();
 
         // This line will grab the text from the input box
@@ -47,17 +46,46 @@
       $(".hero").on("click", function() {
         var heroName = $(this).attr("data-name");
         // Storing our giphy API URL for a random cat image
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + heroName +  "&api_key=ZEaY6YasfbFqPff4Q6G2uaYK8q2WEcw8&limit=5";
-  
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + heroName +  "&api_key=ZEaY6YasfbFqPff4Q6G2uaYK8q2WEcw8&limit=10";
+
         // Perfoming an AJAX GET request to our queryURL
         $.ajax({
           url: queryURL,
           method: "GET"
-          
-        })
 
-        .then(function(data){console.log(data);});
+        })// After the data comes back from the API
+        .then(function(response) {
+          // Storing an array of results in the results variable
+          var results = response.data;
+
+          // Looping over every result item
+          for (var i = 0; i < results.length; i++) {
+
+            // Only taking action if the photo has an appropriate rating
+            if (results[i].rating !== "r" ) {
+              // Creating a div for the gif
+              var gifDiv = $("<div>");
+
+              // Storing the result item's rating
+              var rating = results[i].rating;
+
+              // Creating a paragraph tag with the result item's rating
+              var p = $("<p>").text("Rating: " + rating);
+
+              // Creating an image tag
+              var heroName = $("<img>");
+
+              // Giving the image tag an src attribute of a proprty pulled off the
+              // result item
+             heroName.attr("src", results[i].images.fixed_height.url);
+
+              // Appending the paragraph and personImage we created to the "gifDiv" div we created
+              gifDiv.append(p);
+              gifDiv.append( heroName);
+
+              // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+              $("#gif-space").prepend(gifDiv);
+            }
+          }
+        });
     });
-        // After the data from the AJAX request comes back
-     
-  
