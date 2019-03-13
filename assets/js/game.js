@@ -3,6 +3,8 @@
 
       // Function for displaying hero data
       function renderButtons() {
+        // Initial array of Heros
+      
 
           // Deleting the hero buttons prior to adding new hero buttons
           // (this is necessary otherwise we will have repeat buttons)
@@ -43,6 +45,7 @@
          $(document).on("click", "button", function() {
      // Grabbing and storing the data-name property value from the button
      var heroName = $(this).attr("data-name");
+     $("#gifs-appear-here").empty();
 
      // Constructing a queryURL using the animal name
      var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=ZEaY6YasfbFqPff4Q6G2uaYK8q2WEcw8&q=" +
@@ -75,13 +78,14 @@
            // Setting the src attribute of the image to a property pulled off the result item
            heroImage.attr("src", results[i].images.fixed_height.url);
 
-           // Appending the paragraph and image tag to the animalDiv
+           // Appending the paragraph and image tag to the heroDiv
            heroDiv.append(p);
            heroDiv.append(heroImage);
 
            // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
            $("#gifs-appear-here").prepend(heroDiv);
-           $("#hero-input").empty();
+           
+           
          }
        });
      });
