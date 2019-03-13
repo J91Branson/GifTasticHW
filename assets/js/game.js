@@ -18,6 +18,7 @@
             var a = $("<button>");
             // Adding a class
             a.addClass("hero");
+            a.addClass("nes-btn is-success");
             // Adding a data-attribute with a value of the hero at index i
             a.attr("data-name", heros[i]);
             // Providing the button's text with a value of the hero at index i

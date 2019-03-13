@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="../GifTasticHW/assets/css/style.css">
    
 </head>
@@ -18,11 +19,10 @@
                 
                 <!-- Hero list will get dumped here -->
                 <div id="heros-view">
-                <button data-name="Deadpool">Deadpool</button>
-                <button data-name="Spider-Man">Spider-man</button>
-                <button data-name="Gambit">Gambit</button>
-                <button data-name="Night Crawler">Night Crawler</button>
-        
+                <button type="button" class="nes-btn is-success" data-name="Deadpool">Deadpool</button>
+                <button type="button" class="nes-btn is-success" data-name="Spider-Man">Spider-man</button>
+                <button type="button" class="nes-btn is-success" data-name="Gambit">Gambit</button>
+                <button type="button" class="nes-btn is-success" data-name="Night Crawler">Night Crawler</button>
                 </div>
             
                 <div id="heros-form">
@@ -30,7 +30,7 @@
                   <input type="text" id="hero-input"><br>
             
                   <!-- Button triggers new movie to be added -->
-                  <input id="add-hero" type="submit" value="Add a new Super Hero">
+                  <input id="add-hero" class="nes-btn is-success" type="submit" value="Add a new Super Hero">
                   <div id="gifs-appear-here">
                   </div>
 
