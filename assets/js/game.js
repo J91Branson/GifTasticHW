@@ -40,6 +40,7 @@
   
           // calling renderButtons which handles the processing of our hero array
           renderButtons();
+          $("#hero-input").val("");
         });
 
          // Adding click event listen listener to all buttons
