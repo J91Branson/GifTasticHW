@@ -1,5 +1,5 @@
  // Initial array of Heros
-      var heros = ["Deadpool", "Peter Parker", "Gambit", "Kurt Wagner", "Han Solo"];
+      var heros = ["Deadpool", "Peter Parker", "Gambit", "Kurt Wagner", "Han Solo","Captian Kirk","Robo Cop","Megas XLR","Samurai Jack","One Punch Man"];
 
       // Function for displaying hero data
       function renderButtons() {

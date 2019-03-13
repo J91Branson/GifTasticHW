@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JB's Gif Factory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="../GifTasticHW/assets/css/style.css">
-   
+
 </head>
+
 <body>
-       
-                
-                <div class="container">
-                <h1>Hero Search</h1>
-                <h2>Enter a real name or hero name of your favorite hero; to get that hero's Gif's. Heros can be from comics, movies, tv shows, cartoons, or anime.</h>
-                
-                <!-- Hero list will get dumped here -->
-                <div id="heros-view">
-                <button type="button" class="nes-btn is-success" data-name="Deadpool">Deadpool</button>
-                <button type="button" class="nes-btn is-success" data-name="Peter Parker">Peter Parker</button>
-                <button type="button" class="nes-btn is-success" data-name="Gambit">Gambit</button>
-                <button type="button" class="nes-btn is-success" data-name="Kurt Wagner">Kurt Wagner</button>
-                <button type="button" class="nes-btn is-success" data-name="Han Solo">Han Solo</button>
-                <button type="button" class="nes-btn is-success" data-name="Captian Kirk">Captain Kirk</button>
-                <button type="button" class="nes-btn is-success" data-name="Robo Cop">Robo Cop</button>
-                <button type="button" class="nes-btn is-success" data-name="Megas XLR">Megas XLR</button>
-                <button type="button" class="nes-btn is-success" data-name="Samurai Jack">Samurai Jack</button>
-                <button type="button" class="nes-btn is-success" data-name="One Punch Man">One Punch Man</button>
+
+
+    <div class="container-fluid">
+        <h1>Hero Search</h1>
+        <h2>Enter a real name or hero name of your favorite hero; to get that hero's Gif's. Heros can be from comics,
+            movies, tv shows, cartoons, or anime.</h>
+
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <!-- Hero list will get dumped here -->
+                        <div id="heros-view">
+                            <button type="button" class="nes-btn is-success" data-name="Deadpool">Deadpool</button>
+                            <button type="button" class="nes-btn is-success" data-name="Peter Parker">Peter
+                                Parker</button>
+                            <button type="button" class="nes-btn is-success" data-name="Gambit">Gambit</button>
+                            <button type="button" class="nes-btn is-success" data-name="Kurt Wagner">Kurt
+                                Wagner</button>
+                            <button type="button" class="nes-btn is-success" data-name="Han Solo">Han Solo</button>
+                            <button type="button" class="nes-btn is-success" data-name="Captian Kirk">Captain
+                                Kirk</button>
+                            <button type="button" class="nes-btn is-success" data-name="Robo Cop">Robo Cop</button>
+                            <button type="button" class="nes-btn is-success" data-name="Megas XLR">Megas XLR</button>
+                            <button type="button" class="nes-btn is-success" data-name="Samurai Jack">Samurai
+                                Jack</button>
+                            <button type="button" class="nes-btn is-success" data-name="One Punch Man">One Punch
+                                Man</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="heros-form">
+                            <label for="hero-input">Add a hero!</label>
+                            <input type="text" id="hero-input"><br>
+                            <!-- Button triggers new movie to be added -->
+                            <input id="add-hero" class="nes-btn is-success" type="submit" value="Add a new Super Hero">
+                        </div>
+                    </div>
                 </div>
-            
-                <div id="heros-form">
-                  <label for="hero-input">Add a hero!</label>
-                  <input type="text" id="hero-input"><br>
-            
-                  <!-- Button triggers new movie to be added -->
-                  <input id="add-hero" class="nes-btn is-success" type="submit" value="Add a new Super Hero">
-                  <div id="gifs-appear-here">
-                  </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="gifs-appear-here">
+                    </div>
+                </div>
+            </div>
 
 
 
 
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../GifTasticHW/assets/js/game.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="../GifTasticHW/assets/js/game.js"></script>
 
 </body>
+
 </html>
