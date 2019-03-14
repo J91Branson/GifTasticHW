@@ -2,3 +2,12 @@
 margin-right: 1%; 
 margin-bottom: 1%;
 }
+html {
+    background-color: black;
+}
+.container-fluid {
+    background-color: black;
+}
+h1,h2{
+    color: whitesmoke;
+}
