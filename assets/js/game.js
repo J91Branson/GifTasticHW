@@ -13,7 +13,7 @@
           // Looping through the array of movies
           for (var i = 0; i < heros.length; i++) {
   
-            // Then dynamically generating buttons for each movie in the array.
+            // Then dynamically generating buttons for each hero in the array.
             // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
             var a = $("<button>");
             // Adding a class
@@ -49,7 +49,7 @@
      var heroName = $(this).attr("data-name");
      $("#gifs-appear-here").empty();
 
-     // Constructing a queryURL using the animal name
+     // Constructing a queryURL using the hero name
      var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=ZEaY6YasfbFqPff4Q6G2uaYK8q2WEcw8&q=" +
        heroName + "&limit=10&offset=0&rating=PG&lang=en";
 
