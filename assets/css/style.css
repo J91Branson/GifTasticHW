@@ -5,9 +5,19 @@ margin-bottom: 1%;
 html {
     background-color: black;
 }
+.container-fluid1 {
+    background-color: #1b1924;
+    background-image: url("https://www.transparenttextures.com/patterns/my-little-plaid.png");
+    width: 100%;
+}
 .container-fluid {
     background-color: black;
 }
-h1,h2{
+h1,h2,{
     color: whitesmoke;
+}
+#heros-form {
+    color: whitesmoke;
+    float: right;
+    text-align: right;
 }
